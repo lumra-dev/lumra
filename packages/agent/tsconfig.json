@@ -1,0 +1,3 @@
+{
+  "extends": "@niapy/config/tsconfig.base.json"
+}
