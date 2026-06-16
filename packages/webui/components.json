@@ -12,11 +12,11 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@lumra/ui/components",
-    "utils": "@lumra/ui/lib/utils",
-    "hooks": "@lumra/ui/hooks",
-    "lib": "@lumra/ui/lib",
-    "ui": "@lumra/ui/components"
+    "components": "@lumra/webui/components",
+    "utils": "@lumra/webui/lib/utils",
+    "hooks": "@lumra/webui/hooks",
+    "lib": "@lumra/webui/lib",
+    "ui": "@lumra/webui/components"
   },
   "menuColor": "default",
   "menuAccent": "subtle",

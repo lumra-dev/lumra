@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@lumra/ui/components/button";
+import { Button } from "@lumra/webui/components/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
-} from "@lumra/ui/components/dropdown-menu";
+} from "@lumra/webui/components/dropdown-menu";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 

@@ -1,4 +1,4 @@
-import { cn } from "@lumra/ui/lib/utils";
+import { cn } from "@lumra/webui/lib/utils";
 import type * as React from "react";
 
 function Card({

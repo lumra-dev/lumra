@@ -21,7 +21,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@lumra/ui/*": ["../../packages/ui/src/*"]
+      "@lumra/webui/*": ["../../packages/ui/src/*"]
     }
   },
   "include": [

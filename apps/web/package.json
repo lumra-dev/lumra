@@ -1,5 +1,5 @@
 {
-  "name": "@niapy/web",
+  "name": "@lumra/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "@ai-sdk/google": "^3.0.1",
     "@ai-sdk/react": "^3.0.3",
     "@lumra/env": "workspace:*",
-    "@lumra/ui": "workspace:*",
+    "@lumra/webui": "workspace:*",
     "babel-plugin-react-compiler": "^1.0.0",
     "dotenv": "catalog:",
     "lucide-react": "catalog:",

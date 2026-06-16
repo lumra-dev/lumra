@@ -1,5 +1,5 @@
 {
-  "name": "@niapy/cli",
+  "name": "@lumra/cli",
   "module": "src/index.ts",
   "type": "module",
   "devDependencies": {

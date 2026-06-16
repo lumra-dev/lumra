@@ -1,4 +1,4 @@
-import { cn } from "@lumra/ui/lib/utils";
+import { cn } from "@lumra/webui/lib/utils";
 
 function Skeleton({ className, ...props }: React.ComponentProps<"div">) {
 	return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Toaster } from "@lumra/ui/components/sonner";
+import { Toaster } from "@lumra/webui/components/sonner";
 
 import { ThemeProvider } from "./theme-provider";
 

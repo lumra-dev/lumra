@@ -1,8 +1,8 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { Button } from "@lumra/ui/components/button";
-import { Input } from "@lumra/ui/components/input";
+import { Button } from "@lumra/webui/components/button";
+import { Input } from "@lumra/webui/components/input";
 import { DefaultChatTransport } from "ai";
 import { Send } from "lucide-react";
 import { type FormEvent, useEffect, useRef, useState } from "react";

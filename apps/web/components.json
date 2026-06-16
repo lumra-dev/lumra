@@ -13,8 +13,8 @@
   "iconLibrary": "lucide",
   "aliases": {
     "components": "@/components",
-    "utils": "@lumra/ui/lib/utils",
-    "ui": "@lumra/ui/components",
+    "utils": "@lumra/webui/lib/utils",
+    "ui": "@lumra/webui/components",
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
