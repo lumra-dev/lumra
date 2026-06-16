@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
-		name: "niapy",
-		short_name: "niapy",
+		name: "lumra",
+		short_name: "lumra",
 		description: "my pwa app",
 		start_url: "/new",
 		display: "standalone",

@@ -1,4 +1,4 @@
-import { cn } from "@niapy/ui/lib/utils";
+import { cn } from "@lumra/ui/lib/utils";
 import type * as React from "react";
 
 function Label({ className, ...props }: React.ComponentProps<"label">) {

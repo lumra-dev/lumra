@@ -13,7 +13,7 @@
   "$schema": "https://r2.better-t-stack.dev/schema.json",
   "version": "3.32.0",
   "createdAt": "2026-06-10T09:25:13.380Z",
-  "reproducibleCommand": "bun create better-t-stack@latest niapy --frontend next --backend self --runtime none --database none --orm none --api none --auth none --payments none --addons biome mcp pwa skills turborepo ultracite --examples ai --db-setup none --web-deploy none --server-deploy none --git --package-manager bun --no-install",
+  "reproducibleCommand": "bun create better-t-stack@latest lumra --frontend next --backend self --runtime none --database none --orm none --api none --auth none --payments none --addons biome mcp pwa skills turborepo ultracite --examples ai --db-setup none --web-deploy none --server-deploy none --git --package-manager bun --no-install",
   "database": "none",
   "orm": "none",
   "backend": "self",

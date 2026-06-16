@@ -1,5 +1,5 @@
 {
-  "name": "niapy",
+  "name": "lumra",
   "private": true,
   "workspaces": {
     "packages": [
@@ -30,13 +30,13 @@
     "fix": "ultracite fix"
   },
   "dependencies": {
-    "@niapy/env": "workspace:*",
+    "@lumra/env": "workspace:*",
     "dotenv": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.16",
-    "@niapy/config": "workspace:*",
+    "@lumra/config": "workspace:*",
     "@types/node": "^22.13.14",
     "turbo": "^2.9.16",
     "typescript": "catalog:",

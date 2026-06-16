@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "niapy",
-	description: "niapy",
+	title: "lumra",
+	description: "lumra",
 };
 
 export default function RootLayout({

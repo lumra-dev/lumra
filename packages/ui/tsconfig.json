@@ -1,11 +1,11 @@
 {
-  "extends": "@niapy/config/tsconfig.base.json",
+  "extends": "@lumra/config/tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": [],
     "paths": {
-      "@niapy/ui/*": ["./src/*"]
+      "@lumra/ui/*": ["./src/*"]
     },
     "strictNullChecks": true
   },

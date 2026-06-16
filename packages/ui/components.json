@@ -12,11 +12,11 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@niapy/ui/components",
-    "utils": "@niapy/ui/lib/utils",
-    "hooks": "@niapy/ui/hooks",
-    "lib": "@niapy/ui/lib",
-    "ui": "@niapy/ui/components"
+    "components": "@lumra/ui/components",
+    "utils": "@lumra/ui/lib/utils",
+    "hooks": "@lumra/ui/hooks",
+    "lib": "@lumra/ui/lib",
+    "ui": "@lumra/ui/components"
   },
   "menuColor": "default",
   "menuAccent": "subtle",

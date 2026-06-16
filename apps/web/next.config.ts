@@ -1,4 +1,4 @@
-import "@niapy/env/web";
+import "@lumra/env/web";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {

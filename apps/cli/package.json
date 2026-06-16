@@ -1,0 +1,22 @@
+{
+  "name": "@niapy/cli",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "latest",
+    "typescript": "catalog:"
+  },
+  "scripts": {
+    "dev": "bun run source/cli.ts",
+    "build": ""
+  },
+  "bin": "build/cli.js",
+  "dependencies": {
+    "@sindresorhus/tsconfig": "^8.1.0",
+    "ink": "^7.0.6",
+    "pastel": "^4.0.1",
+    "react": "catalog:",
+    "zod": "catalog:",
+    "@types/react": "catalog:"
+  }
+}

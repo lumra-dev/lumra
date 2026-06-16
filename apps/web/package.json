@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@niapy/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,12 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@ai-sdk/devtools": "^0.0.2",
     "@ai-sdk/google": "^3.0.1",
     "@ai-sdk/react": "^3.0.3",
-    "@niapy/env": "workspace:*",
-    "@niapy/ui": "workspace:*",
-    "ai": "^6.0.3",
+    "@lumra/env": "workspace:*",
+    "@lumra/ui": "workspace:*",
     "babel-plugin-react-compiler": "^1.0.0",
     "dotenv": "catalog:",
     "lucide-react": "catalog:",
@@ -26,7 +24,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@niapy/config": "workspace:*",
+    "@lumra/config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^20",
     "@types/react": "catalog:",

@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@niapy/ui/components/button";
+import { Button } from "@lumra/ui/components/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
-} from "@niapy/ui/components/dropdown-menu";
+} from "@lumra/ui/components/dropdown-menu";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
