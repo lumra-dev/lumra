@@ -7,6 +7,13 @@
     "./server": "./src/server.ts",
     "./web": "./src/web.ts"
   },
+  "scripts": {
+    "dev": "tsc --noEmit --watch",
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
+    "check": "bun x ultracite check",
+    "fix": "bun x ultracite fix"
+  },
   "dependencies": {
     "@t3-oss/env-core": "^0.13.1",
     "@t3-oss/env-nextjs": "^0.13.1",
@@ -15,7 +22,7 @@
   },
   "devDependencies": {
     "@lumra/config": "workspace:*",
-    "@types/node": "^22.13.14",
+    "@types/node": "catalog:",
     "typescript": "catalog:"
   }
 }

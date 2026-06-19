@@ -6,6 +6,19 @@
   "exports": {
     ".": "./src/index.ts"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "dev": "tsc --noEmit --watch",
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
+    "check": "bun x ultracite check",
+    "fix": "bun x ultracite fix"
+  },
+  "dependencies": {
+    "ai": "7.0.0-canary.176",
+    "@ai-sdk/workflow": "1.0.0-canary.93",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
 }

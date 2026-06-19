@@ -35,14 +35,14 @@
   "assist": {
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": "on",
+        "useSortedAttributes": "on"
       }
     }
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
       "correctness": {
         "useExhaustiveDependencies": "info"
       },
@@ -58,6 +58,7 @@
       "style": {
         "noParameterAssign": "error",
         "useAsConstAssertion": "error",
+        "useConsistentTypeDefinitions": "error",
         "useDefaultParameterLast": "error",
         "useEnumInitializers": "error",
         "useSelfClosingElements": "error",

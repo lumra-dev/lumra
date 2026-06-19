@@ -11,7 +11,11 @@
     "./postcss.config": "./postcss.config.mjs"
   },
   "scripts": {
-    "check-types": "tsc --noEmit"
+    "dev": "tsc --noEmit --watch",
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
+    "check": "bun x ultracite check",
+    "fix": "bun x ultracite fix"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",

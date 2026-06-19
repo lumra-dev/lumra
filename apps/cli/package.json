@@ -3,7 +3,8 @@
   "module": "src/index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/node": "latest",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
     "typescript": "catalog:"
   },
   "scripts": {
@@ -16,7 +17,6 @@
     "ink": "^7.0.6",
     "pastel": "^4.0.1",
     "react": "catalog:",
-    "zod": "catalog:",
-    "@types/react": "catalog:"
+    "zod": "catalog:"
   }
 }

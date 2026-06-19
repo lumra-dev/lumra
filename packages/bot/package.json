@@ -1,0 +1,22 @@
+{
+  "name": "@lumra/bot",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "tsc --noEmit --watch",
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
+    "check": "bun x ultracite check",
+    "fix": "bun x ultracite fix"
+  },
+  "dependencies": {
+    "chat": "^4.31.0"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
+}

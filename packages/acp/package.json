@@ -1,0 +1,22 @@
+{
+  "name": "@lumra/acp",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "tsc --noEmit --watch",
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
+    "check": "bun x ultracite check",
+    "fix": "bun x ultracite fix"
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "^0.26.0"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
+}
