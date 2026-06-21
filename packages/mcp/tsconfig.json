@@ -1,0 +1,3 @@
+{
+  "extends": "@lumra/config/tsconfig.base.json"
+}

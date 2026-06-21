@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "retry": "重试",
+    "cancel": "取消",
+    "submit": "提交",
+    "search": "搜索",
+    "back": "返回",
+    "noResults": "未找到结果。",
+    "comingSoon": "即将推出"
+  },
+  "home": {
+    "title": "Lumra",
+    "tagline": "您的 AI 智能体平台"
+  },
+  "chat": {
+    "placeholder": "输入消息...",
+    "send": "发送",
+    "stop": "停止",
+    "thinking": "思考中..."
+  },
+  "header": {
+    "home": "首页",
+    "chat": "聊天",
+    "settings": "设置",
+    "docs": "文档"
+  },
+  "settings": {
+    "title": "设置",
+    "language": "语言",
+    "theme": "主题",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "themeSystem": "跟随系统"
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "概览",
+      "memory": "记忆",
+      "skills": "技能",
+      "agents": "智能体",
+      "collections": "集合",
+      "hub": "Hub"
+    },
+    "sidebar": {
+      "left": "左侧",
+      "right": "右侧",
+      "pin": "固定{side}边栏",
+      "unpin": "取消固定{side}边栏",
+      "close": "关闭{side}边栏",
+      "open": "打开{side}边栏",
+      "floating": "{side}浮动边栏",
+      "toggleLeft": "切换左侧边栏",
+      "toggleRight": "切换右侧边栏"
+    },
+    "sessions": {
+      "searchAria": "搜索会话",
+      "add": "新增会话",
+      "refresh": "刷新会话",
+      "default": {
+        "title": "默认",
+        "description": "暂无消息。"
+      },
+      "memorySync": {
+        "title": "记忆同步",
+        "description": "索引工作区上下文。"
+      },
+      "browserAgent": {
+        "title": "浏览器智能体",
+        "description": "检查仪表盘流程。"
+      },
+      "runtimeCheck": {
+        "title": "运行时检查",
+        "description": "验证工作流流式传输。"
+      }
+    },
+    "sessionSources": {
+      "web": "Web",
+      "local": "本地",
+      "cli": "CLI"
+    },
+    "sessionStatuses": {
+      "active": "活跃",
+      "idle": "空闲",
+      "queued": "排队中"
+    },
+    "sessionActions": {
+      "open": "打开",
+      "clone": "克隆",
+      "copyLink": "复制链接",
+      "delete": "删除"
+    },
+    "menu": {
+      "title": "菜单"
+    },
+    "systemInfo": {
+      "title": "系统信息",
+      "runtime": "运行时",
+      "version": "版本",
+      "status": "状态",
+      "ready": "就绪",
+      "transport": "传输",
+      "refreshStatus": "刷新状态"
+    },
+    "workspace": {
+      "title": "工作区",
+      "selectSession": "选择一个会话",
+      "closeLoaded": "关闭已加载工作区",
+      "empty": "选择一个会话开始。",
+      "close": "关闭 {title}",
+      "infoAria": "{title} 信息",
+      "context": "工作区上下文",
+      "contextManaged": "上下文窗口由工作流流式传输管理。"
+    },
+    "conversation": {
+      "empty": "此会话暂无消息。"
+    },
+    "prompt": {
+      "placeholder": "拖入文件或输入 / 打开命令",
+      "addContext": "添加上下文",
+      "imageOrFile": "图片或文件",
+      "attachment": "附件",
+      "image": "图片",
+      "file": "文件",
+      "sourceLink": "来源链接",
+      "codeSnippet": "代码片段"
+    },
+    "files": {
+      "title": "文件",
+      "refresh": "刷新文件"
+    },
+    "terminal": {
+      "output": {
+        "ready": "AI SDK Workflow shell 已就绪。",
+        "commands": "从此工作区面板运行命令。",
+        "devServer": "Next.js 开发服务器正在监听仪表盘请求。"
+      }
+    }
+  }
+}

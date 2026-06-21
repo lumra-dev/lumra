@@ -8,11 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "@ai-sdk/google": "^3.0.1",
-    "@ai-sdk/react": "^3.0.3",
+    "@ai-sdk/react": "catalog:",
     "@lumra/env": "workspace:*",
+    "@lumra/hub": "workspace:*",
+    "@lumra/i18n": "workspace:*",
     "@lumra/webui": "workspace:*",
+    "@workflow/ai": "catalog:",
+    "ai": "catalog:",
     "babel-plugin-react-compiler": "^1.0.0",
+    "clsx": "^2.1.1",
     "dotenv": "catalog:",
     "lucide-react": "catalog:",
     "next": "^16.2.0",
@@ -21,11 +25,14 @@
     "react-dom": "catalog:",
     "sonner": "catalog:",
     "streamdown": "^1.6.10",
+    "tailwind-merge": "^3.6.0",
+    "workflow": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@lumra/config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.18",
+    "@types/bun": "catalog:",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",

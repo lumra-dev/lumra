@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "search": "Search",
+    "back": "Back",
+    "noResults": "No results found.",
+    "comingSoon": "Coming soon"
+  },
+  "home": {
+    "title": "Lumra",
+    "tagline": "Your AI Agent Platform"
+  },
+  "chat": {
+    "placeholder": "Type a message...",
+    "send": "Send",
+    "stop": "Stop",
+    "thinking": "Thinking..."
+  },
+  "header": {
+    "home": "Home",
+    "chat": "Chat",
+    "settings": "Settings",
+    "docs": "Docs"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System"
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Overview",
+      "memory": "Memory",
+      "skills": "Skills",
+      "agents": "Agents",
+      "collections": "Collections",
+      "hub": "Hub"
+    },
+    "sidebar": {
+      "left": "left",
+      "right": "right",
+      "pin": "Pin {side} sidebar",
+      "unpin": "Unpin {side} sidebar",
+      "close": "Close {side} sidebar",
+      "open": "Open {side} sidebar",
+      "floating": "{side} floating sidebar",
+      "toggleLeft": "Toggle left sidebar",
+      "toggleRight": "Toggle right sidebar"
+    },
+    "sessions": {
+      "searchAria": "Search sessions",
+      "add": "Add session",
+      "refresh": "Refresh sessions",
+      "default": {
+        "title": "Default",
+        "description": "No messages yet."
+      },
+      "memorySync": {
+        "title": "Memory Sync",
+        "description": "Index workspace context."
+      },
+      "browserAgent": {
+        "title": "Browser Agent",
+        "description": "Inspect dashboard flow."
+      },
+      "runtimeCheck": {
+        "title": "Runtime Check",
+        "description": "Validate workflow stream."
+      }
+    },
+    "sessionSources": {
+      "web": "Web",
+      "local": "Local",
+      "cli": "CLI"
+    },
+    "sessionStatuses": {
+      "active": "Active",
+      "idle": "Idle",
+      "queued": "Queued"
+    },
+    "sessionActions": {
+      "open": "Open",
+      "clone": "Clone",
+      "copyLink": "Copy link",
+      "delete": "Delete"
+    },
+    "menu": {
+      "title": "Menu"
+    },
+    "systemInfo": {
+      "title": "System Info",
+      "runtime": "Runtime",
+      "version": "Version",
+      "status": "Status",
+      "ready": "Ready",
+      "transport": "Transport",
+      "refreshStatus": "Refresh status"
+    },
+    "workspace": {
+      "title": "Workspace",
+      "selectSession": "Select a session",
+      "closeLoaded": "Close loaded workspaces",
+      "empty": "Select a session to begin.",
+      "close": "Close {title}",
+      "infoAria": "{title} info",
+      "context": "Workspace context",
+      "contextManaged": "Context window is managed by the workflow stream."
+    },
+    "conversation": {
+      "empty": "No messages in this session."
+    },
+    "prompt": {
+      "placeholder": "Drop files or type / to open commands",
+      "addContext": "Add context",
+      "imageOrFile": "Image or file",
+      "attachment": "Attachment",
+      "image": "Image",
+      "file": "File",
+      "sourceLink": "Source link",
+      "codeSnippet": "Code snippet"
+    },
+    "files": {
+      "title": "Files",
+      "refresh": "Refresh files"
+    },
+    "terminal": {
+      "output": {
+        "ready": "AI SDK Workflow shell is ready.",
+        "commands": "Run commands from this workspace panel.",
+        "devServer": "Next.js dev server listening for dashboard requests."
+      }
+    }
+  }
+}

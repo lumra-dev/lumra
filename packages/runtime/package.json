@@ -7,13 +7,17 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "dev": "tsc --noEmit --watch",
     "build": "tsc --noEmit",
     "check-types": "tsc --noEmit",
     "check": "bun x ultracite check",
     "fix": "bun x ultracite fix"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@lumra/env": "workspace:*",
+    "@lumra/runtime-local": "workspace:*",
+    "@lumra/runtime-vercel": "workspace:*",
+    "ai-sdk-x": "catalog:"
+  },
   "devDependencies": {
     "typescript": "catalog:"
   }

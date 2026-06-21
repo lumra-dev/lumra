@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "base-lyra",
+  "style": "base-luma",
   "rsc": true,
   "tsx": true,
   "tailwind": {
@@ -11,14 +11,17 @@
     "prefix": ""
   },
   "iconLibrary": "lucide",
+  "menuColor": "default-translucent",
+  "menuAccent": "subtle",
   "aliases": {
     "components": "@lumra/webui/components",
     "utils": "@lumra/webui/lib/utils",
-    "hooks": "@lumra/webui/hooks",
+    "ui": "@lumra/webui/components",
     "lib": "@lumra/webui/lib",
-    "ui": "@lumra/webui/components"
+    "hooks": "@lumra/webui/hooks"
   },
-  "menuColor": "default",
-  "menuAccent": "subtle",
-  "registries": {}
+  "registries": {
+    "@ai-elements": "https://ai-sdk.dev/elements/api/registry/{name}.json"
+  },
+  "rtl": false
 }

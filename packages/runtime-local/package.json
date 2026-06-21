@@ -1,0 +1,21 @@
+{
+  "name": "@lumra/runtime-local",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
+    "check": "bun x ultracite check",
+    "fix": "bun x ultracite fix"
+  },
+  "dependencies": {
+    "ai-sdk-x": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
+}

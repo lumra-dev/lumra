@@ -7,15 +7,23 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "dev": "tsc --noEmit --watch",
     "build": "tsc --noEmit",
     "check-types": "tsc --noEmit",
     "check": "bun x ultracite check",
     "fix": "bun x ultracite fix"
   },
   "dependencies": {
-    "ai": "7.0.0-canary.176",
-    "@ai-sdk/workflow": "1.0.0-canary.93",
+    "@lumra/provider": "workspace:*",
+    "@lumra/runtime": "workspace:*",
+    "@lumra/tool-bash": "workspace:*",
+    "@lumra/tool-browser": "workspace:*",
+    "@lumra/tool-chat": "workspace:*",
+    "@lumra/tool-patch": "workspace:*",
+    "@lumra/tool-tasks": "workspace:*",
+    "@lumra/tool-view": "workspace:*",
+    "@workflow/ai": "catalog:",
+    "ai": "catalog:",
+    "workflow": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {

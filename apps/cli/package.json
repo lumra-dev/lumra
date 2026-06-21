@@ -3,7 +3,7 @@
   "module": "src/index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/node": "catalog:",
+    "@types/bun": "catalog:",
     "@types/react": "catalog:",
     "typescript": "catalog:"
   },

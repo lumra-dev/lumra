@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "retry": "再試行",
+    "cancel": "キャンセル",
+    "submit": "送信",
+    "search": "検索",
+    "back": "戻る",
+    "noResults": "結果が見つかりませんでした。",
+    "comingSoon": "近日公開"
+  },
+  "home": {
+    "title": "Lumra",
+    "tagline": "AI エージェントプラットフォーム"
+  },
+  "chat": {
+    "placeholder": "メッセージを入力...",
+    "send": "送信",
+    "stop": "停止",
+    "thinking": "思考中..."
+  },
+  "header": {
+    "home": "ホーム",
+    "chat": "チャット",
+    "settings": "設定",
+    "docs": "ドキュメント"
+  },
+  "settings": {
+    "title": "設定",
+    "language": "言語",
+    "theme": "テーマ",
+    "themeLight": "ライト",
+    "themeDark": "ダーク",
+    "themeSystem": "システム"
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "概要",
+      "memory": "メモリ",
+      "skills": "スキル",
+      "agents": "エージェント",
+      "collections": "コレクション",
+      "hub": "Hub"
+    },
+    "sidebar": {
+      "left": "左",
+      "right": "右",
+      "pin": "{side}サイドバーを固定",
+      "unpin": "{side}サイドバーの固定を解除",
+      "close": "{side}サイドバーを閉じる",
+      "open": "{side}サイドバーを開く",
+      "floating": "{side}フローティングサイドバー",
+      "toggleLeft": "左サイドバーを切り替え",
+      "toggleRight": "右サイドバーを切り替え"
+    },
+    "sessions": {
+      "searchAria": "セッションを検索",
+      "add": "セッションを追加",
+      "refresh": "セッションを更新",
+      "default": {
+        "title": "デフォルト",
+        "description": "まだメッセージはありません。"
+      },
+      "memorySync": {
+        "title": "メモリ同期",
+        "description": "ワークスペースコンテキストを索引化します。"
+      },
+      "browserAgent": {
+        "title": "ブラウザーエージェント",
+        "description": "ダッシュボードフローを検査します。"
+      },
+      "runtimeCheck": {
+        "title": "ランタイムチェック",
+        "description": "ワークフローストリームを検証します。"
+      }
+    },
+    "sessionSources": {
+      "web": "Web",
+      "local": "ローカル",
+      "cli": "CLI"
+    },
+    "sessionStatuses": {
+      "active": "アクティブ",
+      "idle": "待機中",
+      "queued": "キュー済み"
+    },
+    "sessionActions": {
+      "open": "開く",
+      "clone": "複製",
+      "copyLink": "リンクをコピー",
+      "delete": "削除"
+    },
+    "menu": {
+      "title": "メニュー"
+    },
+    "systemInfo": {
+      "title": "システム情報",
+      "runtime": "ランタイム",
+      "version": "バージョン",
+      "status": "ステータス",
+      "ready": "準備完了",
+      "transport": "トランスポート",
+      "refreshStatus": "ステータスを更新"
+    },
+    "workspace": {
+      "title": "ワークスペース",
+      "selectSession": "セッションを選択",
+      "closeLoaded": "読み込み済みワークスペースを閉じる",
+      "empty": "開始するセッションを選択してください。",
+      "close": "{title}を閉じる",
+      "infoAria": "{title} の情報",
+      "context": "ワークスペースコンテキスト",
+      "contextManaged": "コンテキストウィンドウはワークフローストリームで管理されます。"
+    },
+    "conversation": {
+      "empty": "このセッションにはメッセージがありません。"
+    },
+    "prompt": {
+      "placeholder": "ファイルをドロップ、または / でコマンドを開く",
+      "addContext": "コンテキストを追加",
+      "imageOrFile": "画像またはファイル",
+      "attachment": "添付",
+      "image": "画像",
+      "file": "ファイル",
+      "sourceLink": "ソースリンク",
+      "codeSnippet": "コードスニペット"
+    },
+    "files": {
+      "title": "ファイル",
+      "refresh": "ファイルを更新"
+    },
+    "terminal": {
+      "output": {
+        "ready": "AI SDK Workflow shell の準備ができました。",
+        "commands": "このワークスペースパネルからコマンドを実行します。",
+        "devServer": "Next.js 開発サーバーがダッシュボードリクエストを待ち受けています。"
+      }
+    }
+  }
+}

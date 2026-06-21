@@ -1,3 +1,3 @@
 # `@lumra/tool-patch`
 
-File patching and editing tool for Lumra agents.
+File patching and editing tool for Lumra.

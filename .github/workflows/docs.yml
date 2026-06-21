@@ -1,0 +1,64 @@
+name: Deploy Reference Docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "reference/docs/**"
+      - "packages/webui/**"
+      - "packages/config/**"
+      - "package.json"
+      - "bun.lock"
+      - "turbo.json"
+      - ".github/workflows/deploy-reference-docs.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "reference/docs/**"
+      - "packages/webui/**"
+      - "packages/config/**"
+      - "package.json"
+      - "bun.lock"
+      - "turbo.json"
+  workflow_dispatch:
+
+concurrency:
+  group: reference-docs-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Pull Vercel environment
+        env:
+          VERCEL_ENVIRONMENT: ${{ github.event_name == 'pull_request' && 'preview' || 'production' }}
+        run: bunx vercel@latest pull --cwd reference/docs --environment=$VERCEL_ENVIRONMENT --token=${{ secrets.VERCEL_TOKEN }} --yes
+
+      - name: Build Vercel output
+        if: github.event_name == 'pull_request'
+        run: bunx vercel@latest build --cwd reference/docs --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build production Vercel output
+        if: github.event_name != 'pull_request'
+        run: bunx vercel@latest build --cwd reference/docs --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy preview
+        if: github.event_name == 'pull_request'
+        run: bunx vercel@latest deploy --cwd reference/docs --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy production
+        if: github.event_name != 'pull_request'
+        run: bunx vercel@latest deploy --cwd reference/docs --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

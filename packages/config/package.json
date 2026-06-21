@@ -1,5 +1,29 @@
 {
   "name": "@lumra/config",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./_lumra/agent-json": "./src/_lumra/agent-json.ts",
+    "./_lumra/hook-json": "./src/_lumra/hook-json.ts",
+    "./_lumra/hub-json": "./src/_lumra/hub-json.ts",
+    "./_lumra/memory/memory-json": "./src/_lumra/memory/memory-json.ts",
+    "./_lumra/setting-json": "./src/_lumra/setting-json.ts",
+    "./_lumra/skills/skills-json": "./src/_lumra/skills/skills-json.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
+    "check": "bun x ultracite check",
+    "fix": "bun x ultracite fix"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "catalog:"
+  }
 }

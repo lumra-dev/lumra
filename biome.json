@@ -12,6 +12,7 @@
       "!**/dist",
       "!**/.turbo",
       "!**/.nx",
+      "!**/.tmp",
       "!**/dev-dist",
       "!**/.zed",
       "!**/.vscode",
@@ -23,6 +24,7 @@
       "!**/.wrangler",
       "!**/.alchemy",
       "!**/.svelte-kit",
+      "!**/.well-known/workflow/v1",
       "!**/wrangler.jsonc",
       "!**/.source",
       "!**/convex/_generated"
@@ -80,5 +82,13 @@
       "tailwindDirectives": true
     }
   },
+  "overrides": [
+    {
+      "includes": [".agents/**", "packages/webui/**", "packages/tui/**"],
+      "linter": {
+        "enabled": false
+      }
+    }
+  ],
   "extends": ["ultracite/biome/core", "ultracite/biome/next"]
 }

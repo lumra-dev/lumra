@@ -1,3 +1,5 @@
 # `@lumra/bot`
 
-Chatbot adapter for instant messaging platforms. Built on the [Vercel Chat SDK](https://chat-sdk.dev).
+This is built using the Vercel Chat SDK, which is designed to connect various instant messaging platforms.
+
+ It exports a Chat instance that can interface with different IM services, acting as a unified chatbot.

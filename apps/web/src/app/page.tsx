@@ -1,28 +1,25 @@
 "use client";
 
-const TITLE_TEXT = `
- ██████╗ ███████╗████████╗████████╗███████╗██████╗
- ██╔══██╗██╔════╝╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗
- ██████╔╝█████╗     ██║      ██║   █████╗  ██████╔╝
- ██╔══██╗██╔══╝     ██║      ██║   ██╔══╝  ██╔══██╗
- ██████╔╝███████╗   ██║      ██║   ███████╗██║  ██║
- ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝
-
- ████████╗    ███████╗████████╗ █████╗  ██████╗██╗  ██╗
- ╚══██╔══╝    ██╔════╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝
-    ██║       ███████╗   ██║   ███████║██║     █████╔╝
-    ██║       ╚════██║   ██║   ██╔══██║██║     ██╔═██╗
-    ██║       ███████║   ██║   ██║  ██║╚██████╗██║  ██╗
-    ╚═╝       ╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
- `;
+import type { Route } from "next";
+import Link from "next/link";
 
 export default function Home() {
 	return (
 		<div className="container mx-auto max-w-3xl px-4 py-2">
-			<pre className="overflow-x-auto font-mono text-sm">{TITLE_TEXT}</pre>
 			<div className="grid gap-6">
-				<section className="rounded-lg border p-4">
-					<h2 className="mb-2 font-medium">API Status</h2>
+				<section className="grid gap-3 rounded-lg border p-4">
+					<Link
+						className="text-muted-foreground text-sm underline-offset-4 hover:text-foreground hover:underline"
+						href="/dashboard"
+					>
+						Dashboard
+					</Link>
+					<Link
+						className="text-muted-foreground text-sm underline-offset-4 hover:text-foreground hover:underline"
+						href={"/settings" as Route}
+					>
+						Settings
+					</Link>
 				</section>
 			</div>
 		</div>

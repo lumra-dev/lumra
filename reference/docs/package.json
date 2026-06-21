@@ -1,0 +1,33 @@
+{
+  "name": "@lumra/reference-docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check-types": "tsc --noEmit",
+    "check": "bun x ultracite check",
+    "fix": "bun x ultracite fix"
+  },
+  "dependencies": {
+    "@lumra/webui": "workspace:*",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "catalog:",
+    "next": "^16.2.0",
+    "next-themes": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@lumra/config": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}

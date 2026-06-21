@@ -4,7 +4,8 @@
   "workspaces": {
     "packages": [
       "apps/*",
-      "packages/*"
+      "packages/*",
+      "reference/*"
     ],
     "catalog": {
       "dotenv": "^17.2.2",
@@ -17,28 +18,38 @@
       "sonner": "^2.0.5",
       "@types/react": "^19.2.15",
       "@types/react-dom": "^19.2.3",
+      "@types/node": "^24.10.0",
       "tailwindcss": "^4.1.18",
-      "@types/node": "latest"
+      "@types/bun": "latest",
+      "ai": "^6.0.208",
+      "@ai-sdk/react": "^3.0.210",
+      "@workflow/ai": "7.0.0",
+      "workflow": "^4.5.0",
+      "@ai-sdk/mcp": "^1.0.52",
+      "ai-sdk-x": "^1.1.0"
     }
   },
   "type": "module",
   "scripts": {
-    "dev": "turbo dev",
+    "dev": "bun run --cwd apps/web dev",
     "build": "turbo build",
     "check-types": "turbo check-types",
-    "dev:web": "turbo -F web dev",
+    "dev:web": "bun run --cwd apps/web dev",
+    "dev:docs": "bun run --cwd reference/docs dev",
+    "dev:cli": "bun run --cwd apps/cli dev",
     "check": "ultracite check",
     "fix": "ultracite fix"
   },
   "dependencies": {
     "@lumra/env": "workspace:*",
     "dotenv": "catalog:",
+    "playwright": "^1.61.0",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.0",
     "@lumra/config": "workspace:*",
-    "@types/node": "catalog:",
+    "@types/bun": "catalog:",
     "turbo": "^2.9.16",
     "typescript": "catalog:",
     "ultracite": "7.8.3"

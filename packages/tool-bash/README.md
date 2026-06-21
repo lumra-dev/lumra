@@ -1,3 +1,3 @@
 # `@lumra/tool-bash`
 
-Bash command execution tool for Lumra agents.
+Bash command execution tool for Lumra.
