@@ -13,7 +13,7 @@ import type {
 	SidebarSide,
 	SidebarState,
 } from "@/features/dashboard-shell/types/sidebar";
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 import { togglePinned } from "@/features/workspaces/lib/workspaces";
 import { LumraWordmark } from "./wordmark";
 

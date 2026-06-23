@@ -1,27 +1,29 @@
+import { randomUUID } from "node:crypto";
 import {
 	type ChatWorkflowInput,
 	chatWorkflow,
 	type WorkflowModelConfig,
 } from "@lumra/agent";
 import { JSONC } from "@lumra/config";
-import type { AgentSchema } from "@lumra/config/_lumra/agent-json";
-import agentSchema from "@lumra/config/_lumra/agent-json";
-import type { HubSchema } from "@lumra/config/_lumra/hub-json";
-import hubSchema from "@lumra/config/_lumra/hub-json";
-import type { SettingSchema } from "@lumra/config/_lumra/setting-json";
-import settingSchema from "@lumra/config/_lumra/setting-json";
+import type { AgentSchema } from "@lumra/config/_lumra/agent_json";
+import agentSchema from "@lumra/config/_lumra/agent_json";
+import type { HubSchema } from "@lumra/config/_lumra/hub_json";
+import hubSchema from "@lumra/config/_lumra/hub_json";
+import type { SettingSchema } from "@lumra/config/_lumra/setting_json";
+import settingSchema from "@lumra/config/_lumra/setting_json";
 import type { RuntimeAdapter } from "@lumra/runtime";
-import { runtime } from "@lumra/runtime";
+import { getRuntime } from "@lumra/runtime";
 import { convertToModelMessages, type UIMessage } from "ai";
 import type { WorkflowReadableStream } from "workflow/api";
 import { start } from "workflow/api";
 
 const CONFIG_DIR = ".lumra";
 const CONFIG_FILES = {
-	agent: `${CONFIG_DIR}/agent.jsonc`,
-	hub: `${CONFIG_DIR}/hub.jsonc`,
-	setting: `${CONFIG_DIR}/setting.jsonc`,
+	agent: `${CONFIG_DIR}/agent.json`,
+	hub: `${CONFIG_DIR}/hub.json`,
+	setting: `${CONFIG_DIR}/setting.json`,
 } as const;
+const ENV_TEMPLATE_PATTERN = /\$\{([A-Z_][A-Z0-9_]*)\}/g;
 
 export type RuntimeConfigFile = keyof typeof CONFIG_FILES;
 
@@ -78,7 +80,7 @@ export class Hub {
 
 		await this.ensureRuntimeConfigFile(file);
 
-		return await this.runtimeAdapter.storage.readFile(path);
+		return await this.runtimeAdapter.fs.readFile(path);
 	}
 
 	/**
@@ -91,7 +93,7 @@ export class Hub {
 		validateRuntimeConfigSource(file, source);
 
 		await this.ensureConfigDir();
-		await this.runtimeAdapter.storage.writeFile(
+		await this.runtimeAdapter.fs.writeFile(
 			CONFIG_FILES[file],
 			source.endsWith("\n") ? source : `${source}\n`
 		);
@@ -105,7 +107,11 @@ export class Hub {
 		const model = resolveWorkflowModel(config.setting);
 		// Keep workflow inputs serialized as model messages.
 		const modelMessages = await convertToModelMessages(messages);
-		const input: ChatWorkflowInput = { messages: modelMessages, model };
+		const input: ChatWorkflowInput = {
+			messages: modelMessages,
+			model,
+			sessionId: randomUUID(),
+		};
 		const run = await start(chatWorkflow, [input]);
 
 		return {
@@ -120,27 +126,27 @@ export class Hub {
 	): Promise<T> {
 		await this.ensureConfigDir();
 
-		if (!(await this.runtimeAdapter.storage.exists(path))) {
+		if (!(await this.runtimeAdapter.fs.exists(path))) {
 			const value = schema.parse({});
 			await this.writeConfig(path, value);
 
 			return value;
 		}
 
-		const source = await this.runtimeAdapter.storage.readFile(path);
+		const source = await this.runtimeAdapter.fs.readFile(path);
 
 		return schema.parse(JSONC.parse(source));
 	}
 
 	private async writeConfig(path: string, value: unknown): Promise<void> {
-		await this.runtimeAdapter.storage.writeFile(
+		await this.runtimeAdapter.fs.writeFile(
 			path,
 			`${JSONC.stringify(value, null, "\t")}\n`
 		);
 	}
 
 	private async ensureConfigDir(): Promise<void> {
-		await this.runtimeAdapter.storage.mkdir(CONFIG_DIR, { recursive: true });
+		await this.runtimeAdapter.fs.mkdir(CONFIG_DIR, { recursive: true });
 	}
 
 	private async ensureRuntimeConfigFile(
@@ -163,24 +169,27 @@ export class Hub {
 }
 
 async function createHub(): Promise<Hub> {
-	return new Hub(await runtime);
+	return new Hub(await getRuntime());
 }
 
 function resolveWorkflowModel(setting: SettingSchema): WorkflowModelConfig {
 	const modelEntry = setting.api.modelSet[0];
 
 	if (!modelEntry) {
-		throw new Error("No model configured in .lumra/setting.jsonc");
+		throw new Error("No model configured in .lumra/setting.json");
 	}
 
-	const [providerId, model] = modelEntry;
+	const [providerId, model] = modelEntry.map(resolveEnvTemplate) as [
+		string,
+		string,
+	];
 	const provider = setting.api.providers.find(
 		({ id }: SettingSchema["api"]["providers"][number]) => id === providerId
 	);
 
 	if (!provider) {
 		throw new Error(
-			`Provider "${providerId}" is not configured in .lumra/setting.jsonc`
+			`Provider "${providerId}" is not configured in .lumra/setting.json`
 		);
 	}
 
@@ -192,6 +201,15 @@ function resolveWorkflowModel(setting: SettingSchema): WorkflowModelConfig {
 		name: provider.id,
 		type: provider.type,
 	};
+}
+
+function resolveEnvTemplate(value: string): string {
+	return value.replace(ENV_TEMPLATE_PATTERN, (token, envName: string) => {
+		const envValue = process.env[envName];
+
+		// Keep unresolved tokens visible so config mistakes fail loudly.
+		return envValue ?? token;
+	});
 }
 
 function validateRuntimeConfigSource(

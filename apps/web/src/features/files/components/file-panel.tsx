@@ -5,7 +5,7 @@ import { Button } from "@lumra/webui/components/button";
 import { RefreshCcwIcon } from "lucide-react";
 
 import { DEFAULT_EXPANDED_FILE_PATHS } from "@/features/files/data/file-tree";
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 import { DirectoryTree } from "./directory-tree";
 
 export function FilePanel({

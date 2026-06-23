@@ -18,7 +18,7 @@ import {
 import { cn } from "@lumra/webui/lib/utils";
 import { CopyIcon, ExternalLinkIcon, Trash2Icon } from "lucide-react";
 
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 import type { Session } from "@/features/sessions/types/session";
 
 export function SessionCard({

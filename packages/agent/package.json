@@ -15,14 +15,8 @@
   "dependencies": {
     "@lumra/provider": "workspace:*",
     "@lumra/runtime": "workspace:*",
-    "@lumra/tool-bash": "workspace:*",
-    "@lumra/tool-browser": "workspace:*",
-    "@lumra/tool-chat": "workspace:*",
-    "@lumra/tool-patch": "workspace:*",
-    "@lumra/tool-tasks": "workspace:*",
-    "@lumra/tool-view": "workspace:*",
-    "@workflow/ai": "catalog:",
     "ai": "catalog:",
+    "ai-sdk-x": "catalog:",
     "workflow": "catalog:",
     "zod": "catalog:"
   },

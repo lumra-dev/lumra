@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 import { NAV_ITEMS, SESSIONS } from "@/features/sessions/data/sessions";
 import type { Session } from "@/features/sessions/types/session";
 import { SessionCard } from "./session-card";

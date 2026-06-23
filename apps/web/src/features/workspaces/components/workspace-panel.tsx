@@ -17,7 +17,7 @@ import { XIcon } from "lucide-react";
 import { useCallback, useMemo } from "react";
 import { PromptAttachmentMenu } from "@/features/chat/components/actions/prompt-attachment-menu";
 import { ConversationBody } from "@/features/chat/components/conversation-body";
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 import type { Workspace } from "@/features/workspaces/types/workspace";
 import { WorkspaceInfo } from "./workspace-info";
 

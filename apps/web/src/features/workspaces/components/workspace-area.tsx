@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 import type { SidebarState } from "@/features/dashboard-shell/types/sidebar";
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 import { toggleOpen } from "@/features/workspaces/lib/workspaces";
 import type { Workspace } from "@/features/workspaces/types/workspace";
 import { WorkspacePanel } from "./workspace-panel";

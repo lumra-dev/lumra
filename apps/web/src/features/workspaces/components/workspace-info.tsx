@@ -13,7 +13,7 @@ import {
 } from "@lumra/webui/components/tooltip";
 import { InfoIcon } from "lucide-react";
 
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 import type { Workspace } from "@/features/workspaces/types/workspace";
 
 export function WorkspaceInfo({ workspace }: { workspace: Workspace }) {

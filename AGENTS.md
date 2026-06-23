@@ -41,7 +41,6 @@ CI order: `bun run check` → `bun run check-types` → `bun run build`. Run in 
 | `@lumra/runtime-vercel` | Runtime adapter — Vercel (stub) |
 | `@lumra/provider` | AI provider abstraction via `ai` SDK (stub) |
 | `@lumra/bot` | Chat bot using `chat` npm package + filesystem state |
-| `@lumra/tool-*` | AI tool implementations (bash, browser, view, chat, patch, tasks) |
 | `@lumra/webui` | shadcn/ui components (Base UI React + Tailwind v4 + CVA) |
 | `@lumra/tui` | Ink-based terminal UI components |
 | `@lumra/env` | Env validation |

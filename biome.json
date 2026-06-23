@@ -88,6 +88,16 @@
       "linter": {
         "enabled": false
       }
+    },
+    {
+      "includes": ["packages/config/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": "off"
+          }
+        }
+      }
     }
   ],
   "extends": ["ultracite/biome/core", "ultracite/biome/next"]

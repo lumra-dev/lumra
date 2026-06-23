@@ -16,7 +16,8 @@
     "@lumra/env": "workspace:*",
     "@lumra/runtime-local": "workspace:*",
     "@lumra/runtime-vercel": "workspace:*",
-    "ai-sdk-x": "catalog:"
+    "ai-sdk-x": "catalog:",
+    "puppeteer": "^25.1.0"
   },
   "devDependencies": {
     "typescript": "catalog:"

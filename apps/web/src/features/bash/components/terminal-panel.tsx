@@ -9,7 +9,7 @@ import {
 } from "@lumra/webui/components/ai-elements/terminal";
 
 import { TERMINAL_OUTPUT_LINES } from "@/features/bash/data/terminal";
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 
 export function TerminalPanel() {
 	const output = TERMINAL_OUTPUT_LINES.map((line) =>

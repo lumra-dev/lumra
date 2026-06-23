@@ -1,4 +1,4 @@
-import "@lumra/env/web";
+import "@lumra/env/app";
 import type { NextConfig } from "next";
 import { withWorkflow } from "workflow/next";
 

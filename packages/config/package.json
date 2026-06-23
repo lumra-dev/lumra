@@ -6,12 +6,12 @@
   "exports": {
     ".": "./src/index.ts",
     "./tsconfig.base.json": "./tsconfig.base.json",
-    "./_lumra/agent-json": "./src/_lumra/agent-json.ts",
-    "./_lumra/hook-json": "./src/_lumra/hook-json.ts",
-    "./_lumra/hub-json": "./src/_lumra/hub-json.ts",
-    "./_lumra/memory/memory-json": "./src/_lumra/memory/memory-json.ts",
-    "./_lumra/setting-json": "./src/_lumra/setting-json.ts",
-    "./_lumra/skills/skills-json": "./src/_lumra/skills/skills-json.ts"
+    "./_lumra/agent_json": "./src/_lumra/agent_json.ts",
+    "./_lumra/hook_json": "./src/_lumra/hook_json.ts",
+    "./_lumra/hub_json": "./src/_lumra/hub_json.ts",
+    "./_lumra/memory/memory_json": "./src/_lumra/memory/memory_json.ts",
+    "./_lumra/setting_json": "./src/_lumra/setting_json.ts",
+    "./_lumra/skills/skills_json": "./src/_lumra/skills/skills_json.ts"
   },
   "scripts": {
     "build": "tsc --noEmit",

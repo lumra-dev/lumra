@@ -39,7 +39,7 @@ export async function saveRuntimeConfigSource(
 		revalidatePath("/settings");
 
 		return {
-			message: `${file}.jsonc saved.`,
+			message: `${file}.json saved.`,
 			ok: true,
 		};
 	} catch (error) {

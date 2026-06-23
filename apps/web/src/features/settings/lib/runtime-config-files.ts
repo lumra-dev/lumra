@@ -10,18 +10,18 @@ export const runtimeConfigDescriptors = [
 	{
 		description: "Provider, model, MCP, permission, and theme settings.",
 		file: "setting",
-		label: "setting.jsonc",
+		label: "setting.json",
 	},
 	{
 		description:
 			"Hub identity, public endpoint, agent nodes, and heartbeat data.",
 		file: "hub",
-		label: "hub.jsonc",
+		label: "hub.json",
 	},
 	{
 		description:
 			"Sub-agent definitions, hooks, model assignments, and permissions.",
 		file: "agent",
-		label: "agent.jsonc",
+		label: "agent.json",
 	},
 ] satisfies RuntimeConfigDescriptor[];

@@ -19,7 +19,7 @@ import {
 	PaperclipIcon,
 } from "lucide-react";
 
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 
 export function PromptAttachmentMenu() {
 	return (

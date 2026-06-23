@@ -26,11 +26,7 @@ export const metadata: Metadata = {
 	title: "lumra",
 	description: "lumra",
 	icons: {
-		icon: [
-			{ url: "/favicon/favicon.svg", type: "image/svg+xml" },
-			{ url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-			{ url: "/favicon/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-		],
+		icon: [{ url: "/favicon/favicon.svg", type: "image/svg+xml" }],
 		apple: [
 			{
 				url: "/favicon/apple-touch-icon.png",

@@ -6,7 +6,7 @@ import type {
 	SidebarSide,
 	SidebarState,
 } from "@/features/dashboard-shell/types/sidebar";
-import { t } from "@/features/i18n/lib/i18n";
+import { t } from "@/features/i18n";
 import {
 	clearCloseTimer,
 	openFloatingSidebar,

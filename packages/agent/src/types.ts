@@ -10,4 +10,6 @@ export interface WorkflowModelMessage {
 export interface ChatWorkflowInput {
 	messages: WorkflowModelMessage[];
 	model: WorkflowModelConfig;
+	sessionId: string;
+	workspacePath?: string;
 }
